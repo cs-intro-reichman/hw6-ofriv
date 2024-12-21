@@ -1429,6 +1429,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         // try to read from URL
         if (icon.getImageLoadStatus() != MediaTracker.COMPLETE) {
             try {
+                @SuppressWarnings("deprecation")
                 URL url = new URL(filename);
                 icon = new ImageIcon(url);
             }
